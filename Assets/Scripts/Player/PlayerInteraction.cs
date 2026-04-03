@@ -15,6 +15,7 @@ public class PlayerInteraction : MonoBehaviour
     PlayerController playerController;
     AgentEquipment agentEquipment;
     Cow currentlyMilking;
+    IInteractable currentlyInteractingWith;
 
     void Start()
     {
@@ -24,17 +25,33 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     RaycastHit rayHit;
-    void Update()
+    void FixedUpdate()
     {
         if (playerController.PauseInput)
         {
             return;
         }
+        if (currentlyInteractingWith != null)
+        {
+            currentlyInteractingWith.Interact(gameObject);
+        }
         if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out rayHit, interactionDistance, interactableLayers))
         {
             IInteractable interactable = rayHit.collider.GetComponentInParent<IInteractable>();
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
+                if (currentlyInteractingWith == null)
+                {
+                    if (interactable != null)
+                    {
+                        currentlyInteractingWith = interactable;
+                        //currentlyInteractingWith.Interact(gameObject);
+                    }
+                }
+                else
+                {
+                    currentlyInteractingWith.Interact(gameObject);
+                }
                 if (interactable != null)
                 {
                     interactable.Interact(gameObject);
@@ -48,14 +65,14 @@ public class PlayerInteraction : MonoBehaviour
                     print("No interactable");
                 }
             }
-            if (Input.GetKey(KeyCode.E))
-            {
-                if (currentlyMilking != null)
-                {
-                    currentlyMilking.Milk();
-                }
-                OnInteractStateChange?.Invoke(false, "");
-            }
+            //if (Input.GetKey(KeyCode.E))
+            //{
+            //    if (currentlyMilking != null)
+            //    {
+            //        currentlyMilking.Milk();
+            //    }
+            //    OnInteractStateChange?.Invoke(false, "");
+            //}
             if (interactable != null)
             {
                 OnInteractStateChange?.Invoke(true, interactable.Description);
@@ -69,4 +86,13 @@ public class PlayerInteraction : MonoBehaviour
             currentlyMilking = null;
         }
     }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            currentlyInteractingWith = null;
+        }
+    }
+
 }
