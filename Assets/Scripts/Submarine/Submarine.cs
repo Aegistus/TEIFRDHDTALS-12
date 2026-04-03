@@ -9,7 +9,8 @@ public class Submarine : MonoBehaviour
 
     public bool MoveForwards { get; set; } = false;
     public bool MoveBackwards { get; set; } = false;
-
+    public bool LeftRotate { get; set; } = false;
+    public bool RightRotate { get; set; } = false;
 
     Rigidbody playerRigidbody;
     Rigidbody rb;
@@ -32,11 +33,11 @@ public class Submarine : MonoBehaviour
         {
             MoveBackward();
         }
-        if (Input.GetKey(KeyCode.J))
+        if (LeftRotate || Input.GetKey(KeyCode.J))
         {
             RotateLeft();
         }
-        if (Input.GetKey(KeyCode.L))
+        if (RightRotate || Input.GetKey(KeyCode.L))
         {
             RotateRight();
         }
