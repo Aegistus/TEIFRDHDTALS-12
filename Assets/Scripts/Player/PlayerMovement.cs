@@ -40,10 +40,10 @@ public class PlayerMovement : AgentMovement
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            anim.Play("Armature|Salute");
-        }
+        //if (Input.GetKeyDown(KeyCode.G))
+        //{
+        //    anim.Play("Armature|Salute");
+        //}
         // diving
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
@@ -94,7 +94,7 @@ public class PlayerMovement : AgentMovement
             moveVector.y = 0;
             moveVector = moveVector.normalized;
             //moveVector = transform.TransformDirection(moveVector);
-            charController.Move(moveVector * moveSpeed * Time.deltaTime);
+            rb.Move(transform.position + moveVector * moveSpeed * Time.deltaTime, transform.rotation);
 
             RaycastHit rayHit;
             if (Physics.Raycast(transform.position, Vector3.down, out rayHit, 20f, groundLayer))
@@ -135,7 +135,7 @@ public class PlayerMovement : AgentMovement
     void OnDisable()
     {
         moveVector = Vector3.zero;
-        charController.enabled = false;
+        //charController.enabled = false;
     }
 
     void OnEnable()
