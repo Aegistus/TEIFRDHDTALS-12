@@ -89,8 +89,9 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.E))
+        if (!Input.GetKey(KeyCode.E) && currentlyInteractingWith != null)
         {
+            currentlyInteractingWith.StopInteract(gameObject);
             currentlyInteractingWith = null;
         }
     }

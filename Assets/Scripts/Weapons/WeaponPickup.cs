@@ -26,4 +26,9 @@ public class WeaponPickup : MonoBehaviour, IInteractable
         }
         equipment.PickupWeapon(gameObject);
     }
+
+    public void StopInteract(GameObject interactor)
+    {
+        //throw new System.NotImplementedException();
+    }
 }

@@ -112,4 +112,9 @@ public class CarMovement : MonoBehaviour, IInteractable
         SoundManager.Instance.PlaySoundAtPosition("Car_Door_Open", transform.position);
         GameManager.Instance.PlayerEnterCar(this);
     }
+
+    public void StopInteract(GameObject interactor)
+    {
+        //throw new NotImplementedException();
+    }
 }

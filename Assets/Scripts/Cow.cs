@@ -48,4 +48,9 @@ public class Cow : MonoBehaviour, IInteractable
     {
         Milk();
     }
+
+    public void StopInteract(GameObject interactor)
+    {
+        //throw new System.NotImplementedException();
+    }
 }

@@ -29,4 +29,9 @@ public abstract class WeaponAttack : MonoBehaviour, IInteractable
         var agentEquipment = interactor.GetComponent<AgentEquipment>();
         agentEquipment.PickupWeapon(gameObject);
     }
+
+    public void StopInteract(GameObject interactor)
+    {
+        //throw new System.NotImplementedException();
+    }
 }

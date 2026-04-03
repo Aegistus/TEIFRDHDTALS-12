@@ -7,6 +7,10 @@ public class Submarine : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float rotateSpeed = 1f;
 
+    public bool MoveForwards { get; set; } = false;
+    public bool MoveBackwards { get; set; } = false;
+
+
     Rigidbody playerRigidbody;
     Rigidbody rb;
     Transform cameraHolder;
@@ -20,11 +24,11 @@ public class Submarine : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.I))
+        if (MoveForwards || Input.GetKey(KeyCode.I))
         {
             MoveForward();
         }
-        if (Input.GetKey(KeyCode.K))
+        if (MoveBackwards || Input.GetKey(KeyCode.K))
         {
             MoveBackward();
         }
@@ -38,26 +42,26 @@ public class Submarine : MonoBehaviour
         }
     }
 
-    public void MoveForward()
+    void MoveForward()
     {
         var moveVector = moveSpeed * Time.fixedDeltaTime * transform.forward;
         rb.Move(transform.position + moveVector, transform.rotation);
         playerRigidbody.MovePosition(playerRigidbody.position + moveVector);
     }
 
-    public void MoveBackward()
+    void MoveBackward()
     {
         var moveVector = moveSpeed * Time.fixedDeltaTime * -transform.forward;
         rb.Move(transform.position + moveVector, transform.rotation);
         playerRigidbody.MovePosition(playerRigidbody.position + moveVector);
     }
 
-    public void RotateLeft()
+    void RotateLeft()
     {
         rb.transform.Rotate(Vector3.up, -rotateSpeed * Time.fixedDeltaTime);
     }
 
-    public void RotateRight()
+    void RotateRight()
     {
         rb.transform.Rotate(Vector3.up, rotateSpeed * Time.fixedDeltaTime);
     }

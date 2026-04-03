@@ -7,4 +7,5 @@ public interface IInteractable
 {
     public string Description { get; }
     void Interact(GameObject interactor);
+    void StopInteract(GameObject interactor);
 }
