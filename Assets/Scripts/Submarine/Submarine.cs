@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Submarine : MonoBehaviour
 {
-    [SerializeField] float moveForce = 10f;
+    [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float rotateSpeed = 1f;
 
     Rigidbody playerRigidbody;
     Rigidbody rb;
+    Transform cameraHolder;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         playerRigidbody = FindAnyObjectByType<PlayerController>().GetComponent<Rigidbody>();
+        cameraHolder = FindAnyObjectByType<CameraController>().transform;
     }
 
     private void FixedUpdate()
@@ -21,13 +24,41 @@ public class Submarine : MonoBehaviour
         {
             MoveForward();
         }
+        if (Input.GetKey(KeyCode.K))
+        {
+            MoveBackward();
+        }
+        if (Input.GetKey(KeyCode.J))
+        {
+            RotateLeft();
+        }
+        if (Input.GetKey(KeyCode.L))
+        {
+            RotateRight();
+        }
     }
 
     public void MoveForward()
     {
-        //playerCharacterController.enabled = false;
-        rb.Move(transform.position + transform.forward * moveForce * Time.fixedDeltaTime, transform.rotation);
-        playerRigidbody.Move(playerRigidbody.position + transform.forward * moveForce * Time.fixedDeltaTime, playerRigidbody.rotation);
-        //playerCharacterController.enabled = true;
+        var moveVector = moveSpeed * Time.fixedDeltaTime * transform.forward;
+        rb.Move(transform.position + moveVector, transform.rotation);
+        playerRigidbody.MovePosition(playerRigidbody.position + moveVector);
+    }
+
+    public void MoveBackward()
+    {
+        var moveVector = moveSpeed * Time.fixedDeltaTime * -transform.forward;
+        rb.Move(transform.position + moveVector, transform.rotation);
+        playerRigidbody.MovePosition(playerRigidbody.position + moveVector);
+    }
+
+    public void RotateLeft()
+    {
+        rb.transform.Rotate(Vector3.up, -rotateSpeed * Time.fixedDeltaTime);
+    }
+
+    public void RotateRight()
+    {
+        rb.transform.Rotate(Vector3.up, rotateSpeed * Time.fixedDeltaTime);
     }
 }
