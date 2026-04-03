@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386f8569a83cfc74eae5518354ccbcc4, type: 3}
+  m_Name: AllistairAtispy01
+  m_EditorClassIdentifier: 
+  characterName: Allistair Atispy
+  frames:
+  - characterDialogue: Hey there, friend. Looking to make some bottlecaps?
+    responses:
+    - Do I!
+    - No.
+  - characterDialogue: Well I've got a job that needs doing. See that town over there?
+      It's called Kiloton. I want it gone.
+    responses:
+    - Sure, I'm in!
+    - This job seems morally questionable.
+  - characterDialogue: I'll pay you 2,000 bottlecaps to get the job done. Do you
+      accept.
+    responses:
+    - Man, I'd do it for less!
+    - I'd like to bargain for a higher wage.
+  - characterDialogue: Very good. Talk to the town mayor. He should tell you how
+      to arm the bomb.
+    responses:
+    - But why do you want this town destroyed?
+  - characterDialogue: Because I'm wearing red, and that means I'm evil! *maniacal
+      laughing*
+    responses:
+    - Man, you sure are a three dimensional character with lots of moral depth!

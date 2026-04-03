@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386f8569a83cfc74eae5518354ccbcc4, type: 3}
+  m_Name: Level01Cowtana
+  m_EditorClassIdentifier: 
+  characterName: Cowtana
+  frames:
+  - characterDialogue: Hey John :3 Sleep well?
+    responses:
+    - No thanks to your driving, yes.
+  - characterDialogue: So you do miss me <3
+    responses:
+    - '*awooga honk honk bang bang bang*'
+  - characterDialogue: Uh oh! Cowvenant boarders just breached!
+    responses:
+    - ...
+  - characterDialogue: Quick, yank me and get us to the escape pod!
+    responses:
+    - Yes ma'am

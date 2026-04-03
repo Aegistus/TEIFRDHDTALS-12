@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386f8569a83cfc74eae5518354ccbcc4, type: 3}
+  m_Name: HughJass01
+  m_EditorClassIdentifier: 
+  characterName: Hugh Jass
+  frames:
+  - characterDialogue: You! Stop right there! Put your hands where I can see them!
+    responses:
+    - I mean you no harm!
+    - I mean you lots of harm!
+  - characterDialogue: Hol' on a second there, mister. Are you... is it really? John
+      Milkdiver?? I thought you were dead!
+    responses:
+    - Do we know each other?
+  - characterDialogue: It's me John! It's Hugh Jass, remember?
+    responses:
+    - What happened to your skin? You look hideous!
+    - What happened to your skin? You look gorgeous!
+  - characterDialogue: Turns out 100 years of radiation doesn't do a lot of good
+      for a person's skin. While I may look ghoulish though, I'm basically immortal!
+    responses:
+    - Well, whatever works right?
+    - Immortal? Well we can test that hypothesis.
+  - characterDialogue: Say, you're really into doing random, dangerous work for people
+      for very little personal gain, right? I've got a letter that I need to be delivered
+      to my cousin Stu. He's on the other side of the valley. Think you could do
+      that for me?
+    responses:
+    - Yes
+    - No (Yes, but later)
+    - Sarcastic (Yes)
+    - What?
+  - characterDialogue: That's great! Here's my letter.
+    responses:
+    - ...

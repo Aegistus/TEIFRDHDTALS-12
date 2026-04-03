@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386f8569a83cfc74eae5518354ccbcc4, type: 3}
+  m_Name: Level01MilkPrez
+  m_EditorClassIdentifier: 
+  characterName: Milk President Keyes
+  frames:
+  - characterDialogue: Good to see you Master Chef.
+    responses:
+    - President Keyes
+  - characterDialogue: Things aren't going well. Cowtana did her best, but we never
+      really had a chance.
+    responses:
+    - ...
+  - characterDialogue: A Cowvenant fleet is bearing down on us. I need you to take
+      Cowtana down to that mysterious Halo-shaped structure below us [legally distinct].
+    responses:
+    - ...
+  - characterDialogue: She'll fill you in on the details, but make it quick! We've
+      got cow boarding parties bearing down on us!
+    responses:
+    - ...
+  - characterDialogue: Take my pistol, son. I don't keep it loaded, so you'll have
+      to find ammo on the way.
+    responses:
+    - The best gun in the game in the first mission???

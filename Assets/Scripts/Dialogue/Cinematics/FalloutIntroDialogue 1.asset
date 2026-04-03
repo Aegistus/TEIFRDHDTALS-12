@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26e8b6d90dfeef4c84b9dff46d8a357, type: 3}
+  m_Name: FalloutIntroDialogue 1
+  m_EditorClassIdentifier: 
+  frames:
+  - characterName: 
+    text: 
+  - characterName: John Milkdiver
+    text: Ah. What a beatiful day for a picnic with the family.
+  - characterName: Jane Milkdiver
+    text: I agree. What do you think kids?
+  - characterName: John Milkdiver Jr.
+    text: How 'bout a nice cup of LIBER-TEA?
+  - characterName: John Milkdiver III
+    text: How'd you like the taste of freedom?
+  - characterName: John Milkdiver IV
+    text: '*Failed to join lobby*'
+  - characterName: John Milkdiver
+    text: Oh boys. You're gonna grow up to be just like your father!
+  - characterName: Meanwhile, 5 miles underground
+    text: 
+  - characterName: Cow Jung Un
+    text: You WILL program in a nuclear strike on John Milkdiver.
+  - characterName: God (Joe)
+    text: I would never! John Milkdiver is integral to this series!
+  - characterName: Cow Jung Un
+    text: If you do, we'll let you play 10 minutes of Hook, Line, and Sniper.
+  - characterName: God (Joe)
+    text: You've got yourself a deal!
+  - characterName: John Milkdiver
+    text: Wait a second!
+  - characterName: John Milkdiver
+    text: Why do they call it "Old Vegas"?

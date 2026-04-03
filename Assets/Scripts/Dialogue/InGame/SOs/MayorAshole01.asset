@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386f8569a83cfc74eae5518354ccbcc4, type: 3}
+  m_Name: MayorAshole01
+  m_EditorClassIdentifier: 
+  characterName: Mayor Ashole
+  frames:
+  - characterDialogue: Hello there traveller! What can I do for you?
+    responses:
+    - Hi, I wanted to inquire about the bomb in the center of your town.
+  - characterDialogue: Well, this town was founded 100 years ago, right after the
+      bombs dropped. For whatever reason, this one never went off. We named the town
+      Kiloton as a result.
+    responses:
+    - So do you guys like, worship it or something?
+  - characterDialogue: "Worship it? It's an unexploded bomb, stupid. Why would somebody
+      worship a bomb?\t"
+    responses:
+    - Hypothetically, how would somebody go about arming the bomb to explode?
+  - characterDialogue: Well there's a big button that says "DO NOT PRESS" on it.
+      That should do the trick!
+    responses:
+    - Awesome, thanks!
+  - characterDialogue: Say, you're not planning to arm the bomb, are you?
+    responses:
+    - Yes
+    - No (Yes, but later)
+    - Sarcastic (Yes)
+    - What?
+  - characterDialogue: Hahaha, well good luck stranger!
+    responses:
+    - ...

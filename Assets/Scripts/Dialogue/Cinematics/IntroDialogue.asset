@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26e8b6d90dfeef4c84b9dff46d8a357, type: 3}
+  m_Name: IntroDialogue
+  m_EditorClassIdentifier: 
+  frames:
+  - characterName: Milk President
+    text: Milkdiver!
+  - characterName: Milk President
+    text: We've discovered a new planet to harvest milk!
+  - characterName: Milk President
+    text: We're calling it... *Skyrim* (TM).
+  - characterName: Milk President
+    text: (legally distinct)
+  - characterName: Milk President
+    text: You know the drill, "pay off your milk debt..."
+  - characterName: Milk President
+    text: '"yada yada..."'
+  - characterName: Milk President
+    text: Be careful though, these cows seem... different.
+  - characterName: Milk President
+    text: Now get to your hell pod!
+  - characterName: Milk President
+    text: Show me you have what it takes to be free!
+  - characterName: Milk President
+    text: (and pay off your milk debt)
