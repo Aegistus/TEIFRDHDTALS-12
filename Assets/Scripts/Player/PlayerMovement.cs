@@ -9,12 +9,14 @@ public class PlayerMovement : AgentMovement
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float moveSpeed;
     [SerializeField] float turnSpeed;
+    [SerializeField] Transform head;
 
     public bool inCombatMode = true;
     Transform cameraTransform;
     CharacterController charController;
     PlayerController playerController;
     Vector3 moveVector;
+    Vector3 headStartPosition;
 
     Rigidbody rb;
     bool diving = false;
@@ -32,6 +34,7 @@ public class PlayerMovement : AgentMovement
         playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
+        headStartPosition = head.localPosition;
     }
 
     void Update()
@@ -129,6 +132,14 @@ public class PlayerMovement : AgentMovement
         if (transform.position.y <= -50)
         {
             transform.position = new Vector3(transform.position.x, 3, transform.position.z);
+        }
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            head.localPosition = new Vector3(0, 1f, 0);
+        }
+        else
+        {
+            head.localPosition = headStartPosition;
         }
     }
 
