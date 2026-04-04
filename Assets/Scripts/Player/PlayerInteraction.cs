@@ -45,6 +45,7 @@ public class PlayerInteraction : MonoBehaviour
                     if (interactable != null)
                     {
                         currentlyInteractingWith = interactable;
+                        currentlyInteractingWith.StartInteract(gameObject);
                         //currentlyInteractingWith.Interact(gameObject);
                     }
                 }

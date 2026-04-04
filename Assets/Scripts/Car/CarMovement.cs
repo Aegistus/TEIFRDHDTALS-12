@@ -117,4 +117,9 @@ public class CarMovement : MonoBehaviour, IInteractable
     {
         //throw new NotImplementedException();
     }
+
+    public void StartInteract(GameObject interactor)
+    {
+        //throw new NotImplementedException();
+    }
 }

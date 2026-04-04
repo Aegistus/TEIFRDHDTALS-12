@@ -55,4 +55,9 @@ public class DialogueNPC : MonoBehaviour, IInteractable
     {
         //throw new System.NotImplementedException();
     }
+
+    public void StartInteract(GameObject interactor)
+    {
+        //throw new System.NotImplementedException();
+    }
 }

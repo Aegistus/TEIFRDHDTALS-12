@@ -34,4 +34,9 @@ public abstract class WeaponAttack : MonoBehaviour, IInteractable
     {
         //throw new System.NotImplementedException();
     }
+
+    public void StartInteract(GameObject interactor)
+    {
+        //throw new System.NotImplementedException();
+    }
 }

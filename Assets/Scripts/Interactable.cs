@@ -6,10 +6,16 @@ using UltEvents;
 public class Interactable : MonoBehaviour, IInteractable
 {
     [SerializeField] string description;
+    [SerializeField] UltEvent OnStartInteract;
     [SerializeField] UltEvent OnInteract;
     [SerializeField] UltEvent OnStopInteract;
 
     public string Description => description;
+
+    public void StartInteract(GameObject interactor)
+    {
+        OnStartInteract?.Invoke();
+    }
 
     public void Interact(GameObject interactor)
     {
