@@ -139,6 +139,10 @@ public class SoundManager : MonoBehaviour
 	/// <returns>The AudioSource that is playing the sound. null if not found.</returns>
 	public void StopPlayingGlobal(int soundID)
     {
+		if (soundID < 0 || soundID >= sounds.Length)
+		{
+			return;
+		}
 		Sound sound = sounds[soundID];
 		if (sound.source != null)
 		{

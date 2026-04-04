@@ -152,6 +152,6 @@ public class PlayerMovement : AgentMovement
     void OnEnable()
     {
         moveVector = Vector3.zero;
-        charController.enabled = true;
+        //charController.enabled = true;
     }
 }

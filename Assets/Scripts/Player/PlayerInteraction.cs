@@ -52,18 +52,18 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     currentlyInteractingWith.Interact(gameObject);
                 }
-                if (interactable != null)
-                {
-                    interactable.Interact(gameObject);
-                    if (interactable is Cow)
-                    {
-                        currentlyMilking = (Cow)interactable;
-                    }
-                }
-                else
-                {
-                    print("No interactable");
-                }
+                //if (interactable != null)
+                //{
+                //    interactable.Interact(gameObject);
+                //    if (interactable is Cow)
+                //    {
+                //        currentlyMilking = (Cow)interactable;
+                //    }
+                //}
+                //else
+                //{
+                //    print("No interactable");
+                //}
             }
             //if (Input.GetKey(KeyCode.E))
             //{

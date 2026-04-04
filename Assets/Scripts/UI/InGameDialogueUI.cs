@@ -23,7 +23,7 @@ public class InGameDialogueUI : MonoBehaviour
     readonly float inputDelay = .5f;
     float timer = 0f;
 
-    GameObject questMarker;
+    //GameObject questMarker;
     bool aborted = false;
     string currentMusicTheme;
 
@@ -90,8 +90,8 @@ public class InGameDialogueUI : MonoBehaviour
         currentMusicTheme = npc.dialogueMusicID;
         menuOpen = true;
         timer = inputDelay;
-        questMarker = GameObject.FindGameObjectWithTag("Quest Marker");
-        questMarker.SetActive(false);
+        //questMarker = GameObject.FindGameObjectWithTag("Quest Marker");
+        //questMarker.SetActive(false);
     }
 
     public void CloseMenu()
@@ -104,7 +104,7 @@ public class InGameDialogueUI : MonoBehaviour
         StartCoroutine(ReactivateInput());
         SoundManager.Instance.StopPlayingGlobal(currentMusicTheme);
         menuOpen = false;
-        questMarker?.SetActive(true);
+        //questMarker?.SetActive(true);
     }
 
     IEnumerator ReactivateInput()

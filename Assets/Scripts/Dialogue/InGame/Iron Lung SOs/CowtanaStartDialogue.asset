@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386f8569a83cfc74eae5518354ccbcc4, type: 3}
+  m_Name: CowtanaStartDialogue
+  m_EditorClassIdentifier: 
+  characterName: Cowtana
+  frames:
+  - characterDialogue: Alright John, we've reached proper depth. There might be some
+      milk leaks, but the van should hold.
+    responses:
+    - Okay, let's start the mission
+  - characterDialogue: All of our friends, everyone we knew. Gone in an instant.
+      What could have caused this?
+    responses:
+    - That's what we're here to find out.
+  - characterDialogue: Use the controls on the dash to move to the different points
+      of interest.
+    responses:
+    - ...
+  - characterDialogue: Make sure to keep your eye on the proximity detectors. We
+      don't want another OceanGate on our hands!
+    responses:
+    - Yes ma'am

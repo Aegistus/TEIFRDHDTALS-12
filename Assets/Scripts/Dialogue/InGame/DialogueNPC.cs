@@ -19,8 +19,11 @@ public class DialogueNPC : MonoBehaviour, IInteractable
     public void Interact(GameObject interactor)
     {
         InGameDialogueUI.Instance.OpenMenu(dialogue, this);
-        mainCam = Camera.main.gameObject;
-        mainCam.SetActive(false);
+        if (Camera.main != null)
+        {
+            mainCam = Camera.main.gameObject;
+            mainCam.SetActive(false);
+        }
         dialogueCamera.gameObject.SetActive(true);
     }
 
