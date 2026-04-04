@@ -5,7 +5,7 @@ using TMPro;
 
 public class CoordinateReadout : MonoBehaviour
 {
-    enum Coordinate { X, Y}
+    enum Coordinate { X, Y, Degrees}
 
     [SerializeField] Coordinate coordinate;
     [SerializeField] TMP_Text text;
@@ -23,9 +23,13 @@ public class CoordinateReadout : MonoBehaviour
         {
             text.text = ((int)sub.transform.position.x).ToString();
         }
-        else
+        else if (coordinate == Coordinate.Y)
         {
             text.text = ((int)sub.transform.position.z).ToString();
+        }
+        else if (coordinate == Coordinate.Degrees)
+        {
+            text.text = ((int)sub.transform.eulerAngles.y).ToString() + " Deg";
         }
     }
 }
