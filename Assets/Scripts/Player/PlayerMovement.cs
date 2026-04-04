@@ -48,32 +48,32 @@ public class PlayerMovement : AgentMovement
         //    anim.Play("Armature|Salute");
         //}
         // diving
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
-        {
-            if (!diving)
-            {
-                diving = true;
-                charController.enabled = false;
-                rb.useGravity = true;
-                rb.isKinematic = false;
-                rb.constraints = 0;
-                rb.AddForceAtPosition(transform.forward * diveForce, transform.position + diveForcePosition);
-                rb.AddForceAtPosition(transform.up * diveForce * .5f, transform.position + diveForcePosition);
-                diveTimer = divingTime;
-            }
-        }
-        if (diving)
-        {
-            diveTimer -= Time.deltaTime;
-            if (diveTimer <= 0)
-            {
-                diving = false;
-                charController.enabled = true;
-                rb.useGravity = true;
-                rb.isKinematic = true;
-                rb.constraints = RigidbodyConstraints.FreezeRotation;
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftAlt))
+        //{
+        //    if (!diving)
+        //    {
+        //        diving = true;
+        //        //charController.enabled = false;
+        //        rb.useGravity = true;
+        //        rb.isKinematic = false;
+        //        rb.constraints = 0;
+        //        rb.AddForceAtPosition(transform.forward * diveForce, transform.position + diveForcePosition);
+        //        rb.AddForceAtPosition(transform.up * diveForce * .5f, transform.position + diveForcePosition);
+        //        diveTimer = divingTime;
+        //    }
+        //}
+        //if (diving)
+        //{
+        //    diveTimer -= Time.deltaTime;
+        //    if (diveTimer <= 0)
+        //    {
+        //        diving = false;
+        //        charController.enabled = true;
+        //        rb.useGravity = true;
+        //        rb.isKinematic = true;
+        //        rb.constraints = RigidbodyConstraints.FreezeRotation;
+        //    }
+        //}
         if (!diving)
         {
             // lateral movement

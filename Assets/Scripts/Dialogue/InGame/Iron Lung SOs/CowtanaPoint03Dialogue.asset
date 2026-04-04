@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386f8569a83cfc74eae5518354ccbcc4, type: 3}
+  m_Name: CowtanaPoint03Dialogue
+  m_EditorClassIdentifier: 
+  characterName: Cowtana
+  frames:
+  - characterDialogue: 'This one''s weird. This point of interest contains artifacts
+      from two separate planets: Skyrim (legally distinct) and New Vegas (legally
+      distinct).'
+    responses:
+    - From both? What do you mean?
+  - characterDialogue: Bio scans indicate the body on the left is the remains of
+      Archmage Richard Head. And on the right there's an unexploded nuke from New
+      Vegas.
+    responses:
+    - Do you think his friends called him Dick?
+  - characterDialogue: Let's move on.
+    responses:
+    - Fine.

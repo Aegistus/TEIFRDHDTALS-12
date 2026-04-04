@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386f8569a83cfc74eae5518354ccbcc4, type: 3}
+  m_Name: CowtanaPoint02Dialogue
+  m_EditorClassIdentifier: 
+  characterName: Cowtana
+  frames:
+  - characterDialogue: A cactus? All the way down here? And... oh my god...
+    responses:
+    - What? What is it?
+  - characterDialogue: According to my bio scans, that man hanging upside down on
+      the gallows... it's the Milk Lord himself!
+    responses:
+    - The Milk Lord??! He put my family in Milk Debt centuries ago!!
+  - characterDialogue: Master Chef, don't act rashly now. Focus on the mission!
+    responses:
+    - I'm gonna swim out there and kill him myself!
+  - characterDialogue: I'm pretty sure he's already drowned in all of that milk.
+      We should move on.
+    responses:
+    - Fine. He got what he deserved!
