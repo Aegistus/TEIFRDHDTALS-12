@@ -7,9 +7,20 @@ public class FailsafeSceneManager : MonoBehaviour
 {
     public Stack<string> pastScenes = new();
 
+    static FailsafeSceneManager instance;
+
     private void Start()
     {
         SceneManager.activeSceneChanged += UpdateSceneStack;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void UpdateSceneStack(Scene current, Scene next)

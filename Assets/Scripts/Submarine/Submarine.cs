@@ -16,6 +16,7 @@ public class Submarine : MonoBehaviour
     Rigidbody rb;
     Transform cameraHolder;
 
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();

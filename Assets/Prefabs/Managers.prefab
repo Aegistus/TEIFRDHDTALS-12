@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 3239459879546263448}
   - component: {fileID: 3239459879546263449}
   - component: {fileID: 3239459879546263452}
+  - component: {fileID: 3705330718845947353}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -124,3 +125,15 @@ MonoBehaviour:
   numOfPositionalSources: 500
   mixerGroup: {fileID: 0}
   soundPath: Sounds
+--- !u!114 &3705330718845947353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239459879546263446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043769bfdc300d74095172b9c486f9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
