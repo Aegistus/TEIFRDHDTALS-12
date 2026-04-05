@@ -223,7 +223,7 @@ MonoBehaviour:
   frontCamera: {fileID: 5870918264131386617}
   backCamera: {fileID: 1694735261}
   smoothSpeed: 100000
-  mouseSensitivity: 300
+  mouseSensitivity: 200
   cameraVerticalMaxAngle: 60
   cameraVerticalMinAngle: -60
   normalOffset: {x: 0.44, y: -0.221, z: 0.642}
