@@ -39,6 +39,14 @@ public class QuestManager : MonoBehaviour
         AddQuestWithDelay(QuestEnum.MainQuest, 3);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Slash))
+        {
+            GoToNextQuestObjective(QuestEnum.MainQuest);
+        }
+    }
+
     public void AddQuest(Quest quest)
     {
         activeQuests.Add(quest);
