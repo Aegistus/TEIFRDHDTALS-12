@@ -25,19 +25,19 @@ public class Submarine : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (MoveForwards || Input.GetKey(KeyCode.I))
+        if (MoveForwards)
         {
             MoveForward();
         }
-        if (MoveBackwards || Input.GetKey(KeyCode.K))
+        if (MoveBackwards)
         {
             MoveBackward();
         }
-        if (LeftRotate || Input.GetKey(KeyCode.J))
+        if (LeftRotate)
         {
             RotateLeft();
         }
-        if (RightRotate || Input.GetKey(KeyCode.L))
+        if (RightRotate)
         {
             RotateRight();
         }

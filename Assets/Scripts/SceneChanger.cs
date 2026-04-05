@@ -8,6 +8,8 @@ public class SceneChanger : MonoBehaviour
     [SerializeField] string scene;
     [SerializeField] bool skippableScene = false;
 
+    public string Scene => scene;
+
     private void Update()
     {
         if (skippableScene && Input.GetKeyDown(KeyCode.Escape))

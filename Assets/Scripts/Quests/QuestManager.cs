@@ -41,7 +41,7 @@ public class QuestManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Slash))
+        if (Application.isEditor && Input.GetKeyDown(KeyCode.Slash))
         {
             GoToNextQuestObjective(QuestEnum.MainQuest);
         }

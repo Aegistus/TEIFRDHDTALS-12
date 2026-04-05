@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProximityDetectors : MonoBehaviour
+public class ProximityDetector : MonoBehaviour
 {
     [SerializeField] Transform[] leftSensors;
     [SerializeField] Transform[] rightSensors;
     [SerializeField] Transform[] frontSensors;
     [SerializeField] Transform[] backSensors;
-    [SerializeField] float maxDistance = 10f;
+    [SerializeField] float maxDistance = 20f;
 
+    public float MaxDistance => maxDistance;
     public enum Direction { Front, Back, Left, Right }
 
     public bool FrontDetected { get; private set; } = false;

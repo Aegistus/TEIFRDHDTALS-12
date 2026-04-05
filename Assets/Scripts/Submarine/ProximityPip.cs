@@ -1,22 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 
 public class ProximityPip : MonoBehaviour
 {
-    [SerializeField] ProximityDetectors.Direction direction;
+    [SerializeField] ProximityDetector.Direction direction;
     [SerializeField] Material activeMat;
     [SerializeField] Material inactiveMat;
 
     float maxInterval = 2f;
     float minInterval = .5f;
-    float maxDistance = 10f;
 
     AudioSource sound;
     MeshRenderer rend;
-    ProximityDetectors detector;
+    ProximityDetector detector;
     bool active = false;
     float distance = float.MaxValue;
 
@@ -24,7 +21,7 @@ public class ProximityPip : MonoBehaviour
     {
         sound = GetComponent<AudioSource>();
         rend = GetComponent<MeshRenderer>();
-        detector = FindAnyObjectByType<ProximityDetectors>();
+        detector = FindAnyObjectByType<ProximityDetector>();
         StartCoroutine(Coroutine());
     }
 
@@ -38,16 +35,16 @@ public class ProximityPip : MonoBehaviour
         active = false;
         switch (direction)
         {
-            case ProximityDetectors.Direction.Front: active = detector.FrontDetected;
+            case ProximityDetector.Direction.Front: active = detector.FrontDetected;
                 distance = detector.FrontDistance;
                 break;
-            case ProximityDetectors.Direction.Back: active = detector.BackDetected;
+            case ProximityDetector.Direction.Back: active = detector.BackDetected;
                 distance = detector.BackDistance;
                 break;
-            case ProximityDetectors.Direction.Left: active = detector.LeftDetected;
+            case ProximityDetector.Direction.Left: active = detector.LeftDetected;
                 distance = detector.LeftDistance;
                 break;
-            case ProximityDetectors.Direction.Right: active = detector.RightDetected;
+            case ProximityDetector.Direction.Right: active = detector.RightDetected;
                 distance = detector.RightDistance;
                 break;
         }
@@ -68,7 +65,7 @@ public class ProximityPip : MonoBehaviour
             if (active)
             {
                 SoundManager.Instance.PlaySoundAtPosition("Proximity_Detector", transform.position);
-                float proportionalDistance = distance / maxDistance;
+                float proportionalDistance = distance / detector.MaxDistance;
                 float delay = (maxInterval - minInterval) * proportionalDistance + minInterval;
                 yield return new WaitForSeconds(delay);
             }
