@@ -37,12 +37,17 @@ public class PlayerMovement : AgentMovement
         headStartPosition = head.localPosition;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (playerController.PauseInput)
         {
             return;
         }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            transform.localPosition = Vector3.zero;
+        }
+        rb.velocity = Vector3.zero;
         //if (Input.GetKeyDown(KeyCode.G))
         //{
         //    anim.Play("Armature|Salute");
@@ -95,9 +100,9 @@ public class PlayerMovement : AgentMovement
                 moveVector += cameraTransform.right;
             }
             moveVector.y = 0;
-            moveVector = moveVector.normalized;
+            moveVector = moveSpeed * Time.fixedDeltaTime * moveVector.normalized;
             //moveVector = transform.TransformDirection(moveVector);
-            rb.Move(transform.position + moveVector * moveSpeed * Time.deltaTime, transform.rotation);
+            rb.Move(transform.position + moveVector, transform.rotation);
 
             RaycastHit rayHit;
             if (Physics.Raycast(transform.position, Vector3.down, out rayHit, 20f, groundLayer))
