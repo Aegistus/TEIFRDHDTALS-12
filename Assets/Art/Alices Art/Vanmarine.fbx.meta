@@ -3,7 +3,37 @@ guid: bc4bf7acbac7ae947b03188c537da337
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black Panels
+    second: {fileID: 2100000, guid: 612f3d63731ff9d4584749f2a2d624a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark Metal
+    second: {fileID: 2100000, guid: b3ab5bba7a224134c8f0a876c5c0f55e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Indicator
+    second: {fileID: 2100000, guid: 982a0bd79a57458479f55e19d6bb6938, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rusty Metal
+    second: {fileID: 2100000, guid: 7631b7307d0f82544828af76b3c71809, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vanmarine Material
+    second: {fileID: 2100000, guid: 4bf654a9b4adf444a9d68736fe6e4618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert18
+    second: {fileID: 2100000, guid: 08e25891d9badd342a1eb0b28980b5e8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
