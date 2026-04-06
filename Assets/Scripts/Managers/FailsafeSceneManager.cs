@@ -43,7 +43,7 @@ public class FailsafeSceneManager : MonoBehaviour
     // only works if there is one possible next scene option
     public void GoToNextScene()
     {
-        var nextScene = FindAnyObjectByType<SceneChanger>().Scene;
+        var nextScene = FindAnyObjectByType<SceneChanger>()?.Scene;
         if (nextScene != null)
         {
             SceneManager.LoadScene(nextScene);

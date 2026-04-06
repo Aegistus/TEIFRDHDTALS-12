@@ -14,12 +14,12 @@ public class EndIronLungGameplay : MonoBehaviour
 
     IEnumerator EndCoroutine()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         mooSound.Play();
         FindAnyObjectByType<FadeUI>().FadeOut();
         yield return new WaitForSeconds(2);
         ironBarSound.Play();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         GetComponent<SceneChanger>().ChangeScene();
     }
 }
